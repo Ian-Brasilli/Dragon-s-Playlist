@@ -1,0 +1,292 @@
+<!DOCTYPE html5>
+<html lang="es">
+<head>
+
+   
+
+
+<div class="marco-head">
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Caudex&display=swap" rel="stylesheet">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Caudex', 'Georgia', serif;
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%);
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    position: relative;
+    color: #e0e0e0;
+}
+
+/* ===== ENCABEZADO PRINCIPAL ===== */
+.marco-head {
+    font-family: 'Pacifico', 'cursive', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #0a0140, #1a0a4a);
+    padding: 2rem 3rem;
+    border-radius: 60px 60px 30px 30px;
+    width: fit-content;
+    margin: 0 auto 3rem auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+    border: 1px solid rgba(138, 43, 226, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.marco-head:hover {
+    transform: translateY(-5px);
+}
+
+.marco-head h1 {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #c9c9ff, #a88bff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(168, 139, 255, 0.3);
+}
+
+.marco-head h3 {
+    color: #b8b5d4;
+    font-weight: normal;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* ===== TÍTULOS DE SECCIÓN (Dragon Ball, Z, GT, Extras) ===== */
+.marco-texto2 {
+    background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+    padding: 0.8rem 2rem;
+    border-radius: 40px;
+    display: inline-block;
+    margin: 2rem 0 1rem 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-left: 5px solid #ffcc00;
+}
+
+.marco-texto2 h3 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    color: #ffdd77;
+    text-shadow: 0 0 5px rgba(255,221,119,0.5);
+}
+
+/* ===== CONTENEDORES DE CADA CANCIÓN ===== */
+.marco-texto {
+    background: rgba(25, 15, 45, 0.85);
+    backdrop-filter: blur(5px);
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 550px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(138, 43, 226, 0.4);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.marco-texto:hover {
+    transform: scale(1.02);
+    background: rgba(45, 25, 75, 0.95);
+    border-color: #a88bff;
+    box-shadow: 0 8px 25px rgba(168, 139, 255, 0.2);
+}
+
+.marco-texto h3 {
+    color: #ffd966;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    display: inline-block;
+    border-left: 3px solid #ffaa44;
+    padding-left: 1rem;
+}
+
+audio {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 40px;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #2a1e4a;
+}
+
+/* ===== ENLACE FINAL ===== */
+.fondo {
+    text-align: right;
+    margin-top: 4rem;
+    padding: 1.5rem;
+    background: rgba(0,0,0,0.5);
+    border-radius: 30px;
+    backdrop-filter: blur(4px);
+}
+
+.fondo h3 {
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+.fondo a {
+    color: #ffaa66;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+    padding: 0.3rem 0.8rem;
+    border-radius: 30px;
+    background: rgba(255,170,102,0.1);
+}
+
+.fondo a:hover {
+    color: #ffdd99;
+    background: rgba(255,170,102,0.3);
+    text-decoration: underline;
+}
+
+/* ===== GIF DE FONDO ===== */
+.imagen-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.35;
+    filter: brightness(0.7) contrast(1.2);
+}
+
+/* ===== SEPARADORES INVISIBLES MEJORADOS (sin hr visibles) ===== */
+hr[style*="visibility:hidden"] {
+    display: none;
+}
+
+/* En su lugar, usamos márgenes con espaciado natural */
+.marco-texto + .marco-texto {
+    margin-top: 1.2rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .marco-head h1 {
+        font-size: 1.8rem;
+    }
+    
+    .marco-head h3 {
+        font-size: 1rem;
+    }
+    
+    .marco-texto2 h3 {
+        font-size: 1.3rem;
+    }
+    
+    .marco-texto {
+        padding: 0.8rem 1rem;
+        width: 95%;
+    }
+    
+    .marco-texto h3 {
+        font-size: 1rem;
+    }
+    
+    .fondo {
+        text-align: center;
+    }
+}
+</style>
+
+<h1> Dragon's playlist</h1>
+<h3> La musica de los guerreros</h3></div>
+
+
+<head>
+
+
+<body>
+    <hr style=visibility:hidden;>
+    <hr style=visibility:hidden;>
+   
+    <div class="marco-texto2">
+    <h3>Dragon ball</h3></div>
+    <hr style=visibility:hidden;>
+    <hr style=visibility:hidden;>
+
+    <div class="marco-texto">
+    <h3>. La Fantastica Aventura</h3>
+    <audio src="La Fantastica Aventura.mp3" controls></audio></div>
+
+    <div class="marco-texto">
+    <h3>. Romance te puedo dar</h3>
+    <audio src="ROMANCE TE PUEDO DAR.mp3" controls></audio></div>
+
+    <hr style=visibility:hidden;>
+
+      <div class="marco-texto2">
+    <h3>Dragon ball Z</h3></div>
+    <hr style=visibility:hidden;>
+    <hr style=visibility:hidden;>
+
+    <div class="marco-texto">
+    <h3>. Cha-La Head Cha-La</h3>
+    <audio src="Cha-La Head Cha-La .mp3" controls></audio></div>
+     
+    <div class="marco-texto">
+    <h3>. Sal de ahí magnífico poder</h3>
+    <audio src="Sal de ahí magnífico poder (Latino)   Letra.mp3" controls></audio></div>
+
+    <div class="marco-texto">
+    <h3>. El Poder Nuestro Es</h3>
+    <audio src="El Poder Nuestro Es .mp3" controls></audio></div>
+
+    <div class="marco-texto">
+    <h3>. Angeles fuimos</h3>
+    <audio src="angeles fuimos completa HD.mp3" controls></audio></div>
+
+    <hr style=visibility:hidden;>
+
+    <div class="marco-texto2">
+    <h3>Dragon ball GT</h3></div>
+
+    <hr style=visibility:hidden;>
+    <hr style=visibility:hidden;>
+    
+    <div class="marco-texto">
+    <h3>. Mi corazón encantado</h3>
+    <audio src="Mi corazón encantado.mp3" controls></audio></div>
+
+    <div class="marco-texto">
+    <h3>. Caprichosa eres tu</h3>
+    <audio src="Caprichosa eres tu.mp3" controls></audio></div>
+
+    <hr style=visibility:hidden;>
+
+    <div class="marco-texto2">
+    <h3>Dragon Extras</h3></div>
+
+    <hr style=visibility:hidden;>
+    <hr style=visibility:hidden;>
+
+    <div class="marco-texto">
+    <h3>. Fight music</h3>
+    <audio src="(Fightmusic).mp3" controls></audio></div>
+
+    <div class="marco-texto">
+    <h3>. Tapion Ocarina</h3>
+    <audio src="Tapion Ocarina [Original].mp3" controls></audio></div>
+
+
+    <div class="fondo">
+    <H3>Quieres ver los mejores momentos de Dragon ball?:<a href="https://ian-brasilli.github.io/Dragon-s-Best-Moments/">Dragon`s Best Moments</a></H3> </div>
+
+
+<img src="dragon-ball-goku-sparks-gif-desktop-wallpaper.gif" class="imagen-fondo">
+</img>
+
+
+</body>
